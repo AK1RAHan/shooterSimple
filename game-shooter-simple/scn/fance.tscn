@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bifjnvglskb57"]
+
+[ext_resource type="Texture2D" uid="uid://25gl5qoyatsv" path="res://asset/sprite/fence/spr_fencePost.png" id="1_6ba81"]
+[ext_resource type="Script" uid="uid://pehf0obu276y" path="res://scr/fance.gd" id="1_fhw56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxglb"]
+size = Vector2(20, 50)
+
+[node name="fance" type="StaticBody2D" unique_id=1232045810]
+script = ExtResource("1_fhw56")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1225165414]
+shape = SubResource("RectangleShape2D_hxglb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145210427]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_6ba81")
+region_enabled = true
+region_rect = Rect2(42, 38, 12, 58)

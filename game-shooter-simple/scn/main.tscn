@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cyv0xiyieyec1"]
+
+[ext_resource type="PackedScene" uid="uid://dvbg133bryb37" path="res://scn/player.tscn" id="1_7rek1"]
+[ext_resource type="Script" uid="uid://djnpogniv42uq" path="res://scr/main.gd" id="1_gyckk"]
+[ext_resource type="PackedScene" uid="uid://buqkphmfnhbqi" path="res://scn/map.tscn" id="2_a14j1"]
+[ext_resource type="PackedScene" uid="uid://bm2br034xa7jx" path="res://scn/enamy.tscn" id="3_4hsr3"]
+
+[node name="main" type="Node2D" unique_id=497010717]
+script = ExtResource("1_gyckk")
+enemyScn = ExtResource("3_4hsr3")
+
+[node name="Map" parent="." unique_id=1912548070 instance=ExtResource("2_a14j1")]
+
+[node name="player" parent="." unique_id=2147105958 instance=ExtResource("1_7rek1")]
+position = Vector2(94, 283)
+
+[node name="CharacterBody2D" parent="." unique_id=1072075037 instance=ExtResource("3_4hsr3")]
+position = Vector2(489, 316)
+
+[node name="Timer" type="Timer" parent="." unique_id=883239166]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

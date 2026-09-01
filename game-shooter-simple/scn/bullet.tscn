@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bqi8ha48bt4fe"]
+
+[ext_resource type="Script" uid="uid://b6vlhl0r770sf" path="res://scr/bullet.gd" id="1_jfpop"]
+[ext_resource type="Texture2D" uid="uid://br68tje1txaou" path="res://asset/sprite/bullet/bullet.png" id="1_t7ho8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxglb"]
+
+[node name="bullet" type="Area2D" unique_id=1588390994]
+collision_mask = 0
+script = ExtResource("1_jfpop")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261041420]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_t7ho8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1900675822]
+shape = SubResource("RectangleShape2D_hxglb")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=217943234]
+position = Vector2(11, 0)
+target_position = Vector2(20, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=1475647323]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

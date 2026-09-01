@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bm2br034xa7jx"]
+
+[ext_resource type="Texture2D" uid="uid://cot3fi2jqfdnn" path="res://icon.svg" id="1_0rf0v"]
+[ext_resource type="Script" uid="uid://cc08oqhn33r0u" path="res://scr/enamy.gd" id="1_i2gj0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxglb"]
+size = Vector2(50, 50)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1072075037 groups=["musuh"]]
+script = ExtResource("1_i2gj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1377755618]
+shape = SubResource("RectangleShape2D_hxglb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=322172804]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_0rf0v")

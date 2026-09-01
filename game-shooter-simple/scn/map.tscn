@@ -1,0 +1,78 @@
+[gd_scene format=4 uid="uid://buqkphmfnhbqi"]
+
+[ext_resource type="PackedScene" uid="uid://bifjnvglskb57" path="res://scn/fance.tscn" id="1_82qij"]
+[ext_resource type="Texture2D" uid="uid://cls6p7qk6hjmp" path="res://asset/background/dessert/Desain tanpa judul.png" id="1_mqmms"]
+[ext_resource type="Texture2D" uid="uid://25gl5qoyatsv" path="res://asset/sprite/fence/spr_fencePost.png" id="2_lers2"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_lers2"]
+scenes/1/scene = ExtResource("1_82qij")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mqmms"]
+texture = ExtResource("2_lers2")
+texture_region_size = Vector2i(6, 6)
+7:1/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+8:3/0 = 0
+8:1/0 = 0
+7:3/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+7:6/0 = 0
+7:7/0 = 0
+7:8/0 = 0
+7:9/0 = 0
+7:10/0 = 0
+7:11/0 = 0
+7:12/0 = 0
+7:13/0 = 0
+7:14/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+8:14/0 = 0
+8:13/0 = 0
+8:12/0 = 0
+8:11/0 = 0
+8:10/0 = 0
+8:9/0 = 0
+8:8/0 = 0
+8:7/0 = 0
+8:6/0 = 0
+8:5/0 = 0
+8:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ord1s"]
+sources/0 = SubResource("TileSetScenesCollectionSource_lers2")
+sources/1 = SubResource("TileSetAtlasSource_mqmms")
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hxglb"]
+a = Vector2(0, 800)
+b = Vector2(0, 0)
+
+[node name="Map" type="Node2D" unique_id=1912548070]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1950948005]
+position = Vector2(398.00006, 294.5)
+scale = Vector2(0.77929693, 0.8033853)
+texture = ExtResource("1_mqmms")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2079204451]
+position = Vector2(74, 2)
+tile_map_data = PackedByteArray("AAAIABAAAAAAAAAAAQAIABgAAAAAAAAAAQAIABYAAAAAAAAAAQAIABQAAAAAAAAAAQAIAA4AAAAAAAAAAQAIAAwAAAAAAAAAAQAIAAQAAAAAAAAAAQAIAAAAAAAAAAAAAQAIAAIAAAAAAAAAAQAIAAYAAAAAAAAAAQAIAAgAAAAAAAAAAQAIAAoAAAAAAAAAAQAIABIAAAAAAAAAAQAIABoAAAAAAAAAAQAIABwAAAAAAAAAAQAIACQAAAAAAAAAAQAIACIAAAAAAAAAAQAIACAAAAAAAAAAAQAIAB4AAAAAAAAAAQA=")
+tile_set = SubResource("TileSet_ord1s")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1578090657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1424923323]
+position = Vector2(0, -35)
+shape = SubResource("SegmentShape2D_hxglb")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2115073839]
+position = Vector2(0, -13.999998)
+rotation = -1.5733491
+shape = SubResource("SegmentShape2D_hxglb")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1898074096]
+position = Vector2(2.0000002, 604.00006)
+rotation = -1.5733491
+shape = SubResource("SegmentShape2D_hxglb")
